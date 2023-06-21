@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Test</title>
+</head>
+<body>
+<h1>Question</h1>
+<p>
+    Write a JavaScript function named getFullName that takes three parameters: firstName, lastName, and title (optional,
+    default value is an empty string). The function should return the full name as a string, formatted as title
+    firstName lastName. Use template literals.
+</p>
+
+<p id="answer"></p>
+
+<script>
+    function getFullName(firstName, lastName, title = "") {
+        return `${title} ${firstName} ${lastName}`;
+    }
+
+    let result = getFullName("Samiul", "Hoque", "Md.");
+    document.getElementById("answer").innerHTML = result;
+</script>
+
+</body>
+</html>
