@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 2 Live Test</title>
+</head>
+<body>
+<section>
+    Question
+    <br>
+    Write a function that takes an object as an argument and destructures it to extract the 'name' and 'age' properties.
+    Return a string in the format "My name is {name} and I am {age} years old."
+    <br>
+    <br>
+    <br>
+    <p>Result: </p>
+    <p id="result"></p>
+</section>
+
+<script>
+    function createGreeting(obj) {
+        const {name, age} = obj
+        return `My name is ${name} and I am ${age} years old.`
+    }
+
+    const result = createGreeting({name: "Samiul Hoque", age: 25});
+    document.getElementById("result").innerHTML = result;
+
+</script>
+
+</body>
+</html>
