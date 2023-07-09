@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 2 Assignment</title>
+    <link href="css/milligram.css" rel="stylesheet">
+</head>
+<body>
+<section>
+    Exercise 9:
+    <br>
+    Write a function named filterEvenNumbers that takes in an array of numbers and returns a new array with only the
+    even numbers using the array filter method.
+    <br>
+    Example:
+    <br>
+    Input:
+    <br>
+    filterEvenNumbers([1, 2, 3, 4, 5]);
+    <br>
+    Output:
+    <br>
+    [2, 4]
+    <br>
+    <br>
+    <br>
+    <p>Result: </p>
+    <p id="result"></p>
+</section>
+
+<script>
+    function filterEvenNumbers(numbers) {
+        return numbers.filter(number => number % 2 === 0)
+    }
+
+    const result = filterEvenNumbers([1, 2, 3, 4, 5]);
+    document.getElementById("result").innerHTML = `[${result}]`;
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 2 Assignment</title>
+    <link href="css/milligram.css" rel="stylesheet">
+</head>
+<body>
+<section>
+    Exercise 1:
+    <br>
+    Write a function named destructureExample that takes in an object and an array as parameters. The function should
+    use destructuring to extract the values 'name' and 'age' from the object and the values at index 0 and index 2 from
+    the array. The function should then return an object with the extracted values as properties with name and age.
+    <br>
+    Example:
+    <br>
+    Input:
+    <br>
+    const obj = { name: 'John', age: 30, city: 'New York' };
+    <br>
+    const arr = [10, 20, 30, 40];
+    <br>
+    Output:
+    <br>
+    { name: 'John', age: 30 }
+    <br>
+    <br>
+    <br>
+    <p>Result: </p>
+    <p id="result"></p>
+</section>
+
+<script>
+    const obj = {name: 'John', age: 30, city: 'New York'};
+    const arr = [10, 20, 30, 40];
+
+    function destructureExample({name, age}, arr) {
+        return {name: name, age: arr[2]}
+    }
+
+    const result = JSON.stringify(destructureExample(obj, arr));
+    document.getElementById("result").innerHTML = result;
+
+</script>
+
+</body>
+</html>

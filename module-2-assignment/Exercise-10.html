@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 2 Assignment</title>
+    <link href="css/milligram.css" rel="stylesheet">
+</head>
+<body>
+<section>
+    Exercise 10:
+    <br>
+    Write a function named sumArray that takes in an array of numbers and returns the sum of all the numbers using the
+    array reduce method.
+    <br>
+    Example:
+    <br>
+    Input:
+    <br>
+    sumArray([1, 2, 3, 4, 5]);
+    <br>
+    Output:
+    <br>
+    15
+    <br>
+    <br>
+    <br>
+    <p>Result: </p>
+    <p id="result"></p>
+</section>
+
+<script>
+    function sumArray(numbers) {
+        const initial = 0;
+        return numbers.reduce(
+            (accumulator, current) => accumulator + current, initial
+        );
+    }
+
+    const result = sumArray([1, 2, 3, 4, 5]);
+    document.getElementById("result").innerHTML = result;
+
+</script>
+
+</body>
+</html>

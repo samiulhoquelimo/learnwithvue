@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 2 Assignment</title>
+    <link href="css/milligram.css" rel="stylesheet">
+</head>
+<body>
+<section>
+    Exercise 6:
+    <br>
+    Write a function named getLargestNumber that takes in two numbers as parameters. The function should return the
+    larger number using short-circuiting and logical operators (&&, ||, ??).
+    <br>
+    Example:
+    <br>
+    Input:
+    <br>
+    getLargestNumber(10, 5);
+    <br>
+    Output:
+    <br>
+    10
+    <br>
+    <br>
+    <br>
+    <p>Result: </p>
+    <p id="result"></p>
+</section>
+
+<script>
+    function getLargestNumber(first, second) {
+        return first > second ? first : second
+    }
+
+    const result = getLargestNumber(10, 5);
+    document.getElementById("result").innerHTML = result;
+
+</script>
+
+</body>
+</html>

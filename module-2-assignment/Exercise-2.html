@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 2 Assignment</title>
+    <link href="css/milligram.css" rel="stylesheet">
+</head>
+<body>
+<section>
+    Exercise 2:
+    <br>
+    Write a function named sumNumbers that takes in multiple numbers as arguments using the rest operator. The function
+    should return the sum of all the numbers.
+    <br>
+    Example:
+    <br>
+    Input:
+    <br>
+    sumNumbers(1, 2, 3, 4, 5);
+    <br>
+    Output:
+    <br>
+    15
+    <br>
+    <br>
+    <br>
+    <p>Result: </p>
+    <p id="result"></p>
+</section>
+
+<script>
+    function sumNumbers(...nums) {
+        let sum = 0
+        for (const num of nums) {
+            sum += num;
+        }
+        return sum
+    }
+
+    const result = sumNumbers(1, 2, 3, 4, 5);
+    document.getElementById("result").innerHTML = result;
+
+</script>
+
+</body>
+</html>

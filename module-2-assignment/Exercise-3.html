@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 2 Assignment</title>
+    <link href="css/milligram.css" rel="stylesheet">
+</head>
+<body>
+<section>
+    Exercise 3:
+    <br>
+    Write a function named createGreeting that takes in a name as a parameter and returns a greeting message using
+    template literals. The message should be in the format: "Hello, [name]! Welcome to our website."
+    <br>
+    Example:
+    <br>
+    Input:
+    <br>
+    createGreeting('Alice');
+    <br>
+    Output:
+    <br>
+    "Hello, Alice! Welcome to our website."
+    <br>
+    <br>
+    <br>
+    <p>Result: </p>
+    <p id="result"></p>
+</section>
+
+<script>
+    function createGreeting(name) {
+        return `Hello, ${name}! Welcome to our website.`
+    }
+
+    const result = createGreeting('Alice');
+    document.getElementById("result").innerHTML = result;
+
+</script>
+
+</body>
+</html>

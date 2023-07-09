@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 2 Assignment</title>
+    <link href="css/milligram.css" rel="stylesheet">
+</head>
+<body>
+<section>
+    Exercise 11:
+    <br>
+    Write a function named sortNumbers that takes in an array of numbers and returns a new array with the numbers sorted
+    in ascending order using the array sort method.
+    <br>
+    Example:
+    <br>
+    Input:
+    <br>
+    sortNumbers([5, 2, 8, 1, 4]);
+    <br>
+    Output:
+    <br>
+    [1, 2, 4, 5, 8]
+    <br>
+    <br>
+    <br>
+    <p>Result: </p>
+    <p id="result"></p>
+</section>
+
+<script>
+    function sortNumbers(numbers) {
+        return numbers.sort()
+    }
+
+    const result = sortNumbers([5, 2, 8, 1, 4]);
+    document.getElementById("result").innerHTML = result;
+
+</script>
+
+</body>
+</html>

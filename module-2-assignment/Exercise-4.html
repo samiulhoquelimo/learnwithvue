@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 2 Assignment</title>
+    <link href="css/milligram.css" rel="stylesheet">
+</head>
+<body>
+<section>
+    Exercise 4:
+    <br>
+    Write a function named isEven that takes in a number as a parameter and returns the string "Even" if the number is
+    even, and "Odd" if the number is odd. Use a ternary operator instead of an if/else statement.
+    <br>
+    Example:
+    <br>
+    Input:
+    <br>
+    isEven(7);
+    <br>
+    Output:
+    <br>
+    "Odd"
+    <br>
+    <br>
+    <br>
+    <p>Result: </p>
+    <p id="result"></p>
+</section>
+
+<script>
+    function isEven(number) {
+        return number % 2 === 0 ? "Even" : "Odd"
+    }
+
+    const result = isEven(7);
+    document.getElementById("result").innerHTML = result;
+
+</script>
+
+</body>
+</html>
