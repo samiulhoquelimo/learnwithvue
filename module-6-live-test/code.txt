@@ -1,0 +1,28 @@
+// Question:
+//     Create a Vue component that iterates through an array of objects and displays their properties in an unordered list.
+//     The component should have the following requirements:
+//     Create a  variable named items containing an array of objects.
+//     Each object should have a name and age property.
+//     Use v-for to loop through the items array and display the name and age properties in separate list items.
+
+<script setup>
+const items = [
+  {name: 'John', age: 45},
+  {name: 'Jane', age: 36},
+  {name: 'Alice', age: 24},
+  {name: 'Bob', age: 22}
+]
+</script>
+
+<template>
+  <div>
+    <h2>List of People</h2>
+    <ul>
+      <li v-for="(item, index) in items" :key="index">
+        <strong>Name:</strong> {{ item.name }}, <strong>Age:</strong> {{ item.age }}
+      </li>
+    </ul>
+  </div>
+</template>
+
+<style scoped></style>
