@@ -1,0 +1,15 @@
+Assignment 1 (Module 7)
+Assignment:
+
+Task1 :
+Create a Vue.js component that implements a carousel.
+Inside the Carousel component:
+Implement the onMounted hook to initialize the carousel with some sample images.
+Utilize the onBeforeUnmount hook to ensure that any ongoing tasks are properly cleaned up.
+
+
+Task2 :
+Create another Vue.js component that displays a pie chart.
+Inside the PieChart component:
+Implement the onMounted hook to fetch data from a sample data source or manually create data for the pie chart.
+Utilize the onBeforeUnmount hook to ensure that any ongoing tasks are properly cleaned up.
