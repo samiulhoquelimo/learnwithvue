@@ -1,0 +1,8 @@
+Question
+
+Question : You are working on a Vue.js 3 application using the Composition API. Your task is to implement a component that fetches data from an API when it is mounted.
+
+
+
+
+Please create the solution  in a single file named DataFetchingComponent.vue. This file should include the necessary imports, the component definition with the specified hooks, and the export statement for the DataFetchingComponent.
