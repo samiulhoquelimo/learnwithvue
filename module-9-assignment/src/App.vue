@@ -1,11 +1,12 @@
 <script setup>
 import NavBar from "./components/NavBar.vue";
-import BlogPage from "./components/BlogPage.vue";
 </script>
 
 <template>
-  <NavBar/>
-  <BlogPage/>
+  <main>
+    <NavBar/>
+    <RouterView/>
+  </main>
 </template>
 
 <style scoped>

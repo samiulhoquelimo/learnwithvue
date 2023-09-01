@@ -2,11 +2,17 @@
 import {Navbar, NavbarCollapse, NavbarLink, NavbarLogo} from 'flowbite-vue'
 
 import {ref} from 'vue';
+import {useRouter} from "vue-router";
 
 const categories = ref(null);
 fetch('https://basic-blog.teamrabbil.com/api/post-categories')
     .then(response => response.json())
     .then(data => categories.value = data);
+
+const router = useRouter()
+const onClick = (id) => {
+  router.push(`/blog/${id}`);
+}
 
 </script>
 
@@ -20,8 +26,12 @@ fetch('https://basic-blog.teamrabbil.com/api/post-categories')
     </template>
     <template #default="{isShowMenu}">
       <NavbarCollapse :isShowMenu="isShowMenu">
-        <NavbarLink isActive >হোম</NavbarLink>
-        <NavbarLink v-for="category in categories" :key="category.id">{{ category.name }}</NavbarLink>
+        <NavbarLink>হোম</NavbarLink>
+        <NavbarLink :on-click="onClick" v-for="category in categories" :key="category.id">
+          <a :href="`/blogs/${category.id}`" class="flex items-center">
+            {{ category.name }}
+          </a>
+        </NavbarLink>
       </NavbarCollapse>
     </template>
   </Navbar>
