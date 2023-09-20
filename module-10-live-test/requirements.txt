@@ -1,0 +1,10 @@
+Question
+
+Question : Assume that you have a simple Vue Router setup,
+and you'll need to complete a Vue component and a router link to navigate to a named route.
+
+Instructions:
+Set up a basic Vue Router configuration with two routes:
+
+Route 1: Path / should display the "Home" component.
+Route 2: Path /user/:username should display the "UserProfile" component
