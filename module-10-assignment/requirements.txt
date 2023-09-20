@@ -1,0 +1,31 @@
+Assignment 1 (Module 10)
+Assignment: Simple Shop  Website with Vue Router
+
+Objective:
+Build a simple shop  website using Vue.js 3 with Vue Router for navigation.
+The website should have multiple pages for browsing products and viewing product details.
+
+Requirements:
+
+Product List Page:
+Create a page to display a list of products.
+Each product should have an image, title, price, and a "View Details" button.
+
+Product Details Page:
+When a user clicks the "View Details" button on a product, they should be taken to a product details page.
+Display the product's details including image, title, price, description
+
+Navigation:
+Set up Vue Router with the following routes:
+Route 1: Path / should lead to the Product List page.
+Route 2: Path /product/:id should lead to the Product Details page, displaying details for the product with the specified id.
+
+Routing and Composition API:
+Use Vue Router to navigate between pages.
+Implement the Product List and Product Details pages using Vue 3 Composition API.
+
+Styling and Design:
+Apply CSS to make the website visually appealing. You may use a CSS framework or create custom styles.
+
+Submission:
+Submit your assignment by sharing the GitHub repository link.
