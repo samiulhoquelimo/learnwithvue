@@ -1,0 +1,23 @@
+Task 02: Simple User Authentication App using Pinia Store
+
+Objective: Create a Vue application where users can register, log in, and view a protected dashboard.
+Use Pinia for state management.
+
+Requirements:
+
+User Interface:
+
+Register Page: Fields for email, password, and a confirm password. A button to register.
+
+Login Page: Fields for email and password. A button to log in.
+
+Dashboard Page: A simple welcome message displaying the user's email and a button to log out.
+
+State Management (using Pinia):
+Store the registered users and the current logged-in user in a Pinia store.
+Implement actions for registration, login, and logout.
+
+
+App Logic:
+Registration should check for valid email format and matching passwords.
+Login should check against registered users.
