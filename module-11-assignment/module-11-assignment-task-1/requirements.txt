@@ -1,0 +1,24 @@
+Task 01: Todo App using Pinia Store
+
+Objective: Create a simple Todo application where users can add, remove, and toggle the status of a task (done/undone).
+ Use Pinia for state management.
+
+Requirements:
+
+User Interface:
+
+An input box to add new tasks.
+A button to add tasks.
+A list that displays the tasks. Each task should have:
+Task name
+A checkbox to mark the task as done or undone.
+A delete button to remove the task.
+
+
+State Management (using Pinia):
+
+Store the tasks in a Pinia store.
+
+The store should have actions for adding tasks, removing tasks, and toggling task status.
+
+.......................................................................................................................................................................
