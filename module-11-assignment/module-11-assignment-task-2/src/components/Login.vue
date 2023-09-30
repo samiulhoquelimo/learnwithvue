@@ -2,14 +2,14 @@
 import {authStore} from "../store/authStore.js";
 
 const auth = authStore()
-console.log('isAuthenticated: ' + auth.isAuthenticated)
-const submitHandler = async () => {
+
+const submitHandler = async (fields) => {
   await new Promise((r) => setTimeout(r, 1000))
-  auth.authenticate()
-  console.log('isAuthenticated: ' + auth.isAuthenticated)
+  auth.login(fields['email'], fields['password'])
 }
 
 </script>
+
 <template>
   <div class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -60,7 +60,7 @@ const submitHandler = async () => {
           <a href="/register" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Register</a>
         </p>
       </div>
-      <!--    <pre wrap>{{ value }}</pre>-->
+<!--      <pre wrap>{{ value }}</pre>-->
     </FormKit>
 
     <div v-if="auth.isAuthenticated">

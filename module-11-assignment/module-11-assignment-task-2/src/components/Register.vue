@@ -5,10 +5,9 @@ import {authStore} from "../store/authStore.js";
 const auth = authStore()
 console.log('isAuthenticated: ' + auth.isAuthenticated)
 
-const submitHandler = async () => {
+const submitHandler = async (fields) => {
   await new Promise((r) => setTimeout(r, 1000))
-  auth.authenticate()
-  console.log('isAuthenticated: ' + auth.isAuthenticated)
+  auth.register(fields['email'], fields['password'])
 }
 
 </script>
