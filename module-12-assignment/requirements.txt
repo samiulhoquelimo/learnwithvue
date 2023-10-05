@@ -1,0 +1,21 @@
+Assignment 1 (Module 12)
+Assignment: Simple Inventory management Website using Vue.js 3
+
+Objective:
+Build a simple admin panel using Vue.js 3.
+Where Master layout must contain sidebar and topbar.
+The website should have multiple pages for browsing Stock dataTable and viewing specific product details.
+
+Requirements:
+
+Stock DataTable Page:
+Create a page to display a list of products.
+Each product should have a title, unit price, number of items and a "View Details" button.
+
+
+Product Details Page:
+When a user clicks the "View Details" button on a product, they should be taken to a product details page.
+Display the product's details including image, title, price, description
+
+Submission:
+Submit your assignment by sharing the GitHub repository link.
