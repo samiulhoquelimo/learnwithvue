@@ -1,11 +1,10 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 import Home from '../components/Home.vue'
 import About from '../components/About.vue'
 import Contact from '../components/Contact.vue'
 import Products from '../components/Products.vue'
 import Product from '../components/Product.vue'
 import Sidebar from '../components/Sidebar.vue'
-import Protected from '../components/Protected.vue'
 import Login from '../components/Login.vue'
 import {authStore} from '../store/store'
 import Cart from '../components/Cart.vue'
@@ -13,6 +12,7 @@ import Orders from '../components/Orders.vue'
 
 import Admin from '../components/Admin.vue'
 import Editor from '../components/Editor.vue'
+import Payment from "../components/Payment.vue";
 
 const routes = [
     {
@@ -38,7 +38,7 @@ const routes = [
             default: Admin,
             LeftSideBar: Sidebar
         },
-        meta:{
+        meta: {
             requiresAuth: true,
         }
     },
@@ -47,7 +47,7 @@ const routes = [
             default: Editor,
             LeftSideBar: Sidebar
         },
-        meta:{
+        meta: {
             requiresAuth: true,
         }
     },
@@ -83,11 +83,11 @@ const routes = [
         name: 'product',
     },
     {
-        path: '/protected', components: {   
-            default: Protected,
+        path: '/payment', components: {
+            default: Payment,
             LeftSideBar: Sidebar,
         },
-        meta:{
+        meta: {
             requiresAuth: true
         }
     }
@@ -103,9 +103,9 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    if(to.meta.requiresAuth && !authStore.isAuthenticated){
+    if (to.meta.requiresAuth && !authStore.isAuthenticated) {
         next('/login')
-    }else{
+    } else {
         next()
     }
 })

@@ -1,5 +1,6 @@
-import { reactive } from 'vue'
-import { authStore } from './store'
+import {reactive} from 'vue'
+import {authStore} from './store'
+
 const wishlist = reactive({
     items: [],
     isWishListed(product) {
@@ -8,7 +9,7 @@ const wishlist = reactive({
     async fetchWishlist() {
         const apiUrl = 'http://localhost:8000/api/wishlist'
         const token = authStore.getUserToken()
-        if(!token){
+        if (!token) {
             return
         }
         try {
@@ -18,13 +19,10 @@ const wishlist = reactive({
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json'
                 }
-
             })
-
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-
             const wishlistData = await response.json();
             this.items = wishlistData.wishlist
         } catch (error) {
@@ -67,9 +65,8 @@ const wishlist = reactive({
             // const data = await response.json();
             // console.log('Product ID saved to wishlist:', data);
         } catch (error) {
-
+            console.log(error)
         }
-
     },
     getIcon(product) {
         if (this.isWishListed(product)) {
@@ -78,12 +75,10 @@ const wishlist = reactive({
             return '//img.icons8.com/?size=96&id=85038&format=png'
         }
     },
-    clearItems(){
+    clearItems() {
         console.log('clearing items')
         this.items = []
     }
-
-
 })
 
-export { wishlist }
+export {wishlist}

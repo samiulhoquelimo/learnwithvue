@@ -1,5 +1,6 @@
-import { reactive } from 'vue'
-import { authStore } from './store'
+import {reactive} from 'vue'
+import {authStore} from './store'
+
 const order = reactive({
     orders: [],
     async fetchOrders() {
@@ -68,11 +69,11 @@ const order = reactive({
                 },
                 body: JSON.stringify(payload)
             })
-            this.fetchOrders()
+            await this.fetchOrders()
         } catch (error) {
             console.error('Error placing order:', error);
         }
     }
 })
 
-export { order }
+export {order}

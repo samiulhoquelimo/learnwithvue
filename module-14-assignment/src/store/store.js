@@ -1,7 +1,8 @@
-import { ref, reactive } from 'vue'
+import {reactive} from 'vue'
 import router from '../router/router'
 import {cart} from './cart'
 import {wishlist} from './wishlist'
+
 const authStore = reactive({
     isAuthenticated: localStorage.getItem('auth') == 1,
     user: JSON.parse(localStorage.getItem('user')),
@@ -11,7 +12,7 @@ const authStore = reactive({
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ email: username, password })
+            body: JSON.stringify({email: username, password})
         }).then(res => res.json())
             .then(res => {
                 if (res.error == 0) {
@@ -28,15 +29,15 @@ const authStore = reactive({
         authStore.user = {}
         localStorage.setItem('auth', 0)
         localStorage.setItem('user', '{}')
-        cart.items ={}
+        cart.items = {}
         // cart.totalPrice = 0
         cart.saveCartInLocalStorage()
         wishlist.items = []
         router.push('/login')
     },
-    getUserToken(){
+    getUserToken() {
         return authStore.user.token
     }
 })
 
-export { authStore }
+export {authStore}
