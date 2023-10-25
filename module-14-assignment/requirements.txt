@@ -1,0 +1,52 @@
+Assignment 1 (Module 14)
+
+Assignment:
+The objective of this assignment is to build a fully functional e-commerce store using Vue.js.
+It will create a feature-rich online store that allows users to browse products, add items to the cart, and complete a purchase.
+
+Project Setup:
+
+Set up a new Vue.js project using Vite or your preferred Vue setup.
+
+Create a project structure with components for product listing, product details, shopping cart, user authentication, and checkout.
+
+Product Data:
+Define a JSON array of sample product data, including product names, prices, descriptions, image URLs, and other relevant product information.
+
+Product Listing:
+Create a product listing page that displays the available products. Use Vue components for each product item.
+Implement features such as sorting, filtering, and pagination for the product list.
+
+
+Product Details:
+Create a product details page that displays more information about a selected product when a user clicks on it.
+Include an "Add to Cart" button on the product details page to add items to the shopping cart.
+
+Shopping Cart:
+Implement a shopping cart component that displays the items added by the user.
+Include product names, quantities, prices, and a "Remove" button for each item.
+Display the total price of items in the cart and allow users to update quantities or remove items.
+
+User Authentication:
+Create a user authentication system. Allow users to register, log in, and log out.
+Ensure that only authenticated users can access the checkout process.
+
+Checkout Process:
+Create a multi-step checkout process that guides users through providing shipping information and payment details.
+Implement form validation and error handling.
+
+Payment Integration (Optional):
+Integrate a payment gateway for simulating payment processing (e.g., Stripe, PayPal Sandbox, or a mock payment service).
+
+Data Persistence:
+Use local storage or Vuex to persist the cart's data between page refreshes and maintain the user's session.
+
+Optional Enhancements:
+Implement user reviews and ratings for products.
+Create a dashboard for users to view order history.
+Add a product search feature.
+
+Include animations and transitions for a polished user experience.
+
+Submission:
+Submit your assignment by sharing the GitHub repository link.
