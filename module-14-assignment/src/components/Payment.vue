@@ -1,5 +1,10 @@
 <script setup>
-import {cart} from "../store/cart.js";
+import {cart} from "../store/cart.js"
+
+window.paypalLoadScript({clientId: "test"}).then((paypal) => {
+  paypal.Buttons().render("#paypal-buttons")
+})
+
 </script>
 <template>
   <div class="bg-white">
@@ -33,15 +38,11 @@ import {cart} from "../store/cart.js";
             <strong>{{ cart.totalPrice }}</strong>
           </p>
         </div>
-        <button @click="cart.checkout()"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Cash on delivery
-        </button>
 
-        <button
-            class="ml-5 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-          <router-link to="/payment">Payment via </router-link>
-        </button>
+        <h2 class="text-2xl font-bold tracking-tight text-red-900">Complete payment via:</h2>
+        <br/>
+        <div id="paypal-buttons"></div>
+
       </div>
     </div>
   </div>
