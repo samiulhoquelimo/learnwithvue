@@ -1,0 +1,79 @@
+// src/components/Cart.vue
+<script setup>
+defineProps(['cart'])
+</script>
+<template>
+  <div>
+    <h1>Shopping Cart</h1>
+    <ul>
+      <li v-for="item in cart" :key="item.product.id">
+        {{ item.product.name }} - Quantity: {{ item.quantity }}
+      </li>
+    </ul>
+  </div>
+</template>
+<style scoped>
+</style>
+
+
+
+
+// src/components/ProductList.vue
+<script setup>
+defineProps(['products'])
+const emit = defineEmits(['add-to-cart'])
+const addToCart = (product) => {
+  emit('add-to-cart', product)
+}
+</script>
+<template>
+  <div>
+    <h1>Product List</h1>
+    <div v-for="product in products" :key="product.id">
+      <div>
+        <h2>{{ product.name }}</h2>
+        <p>Price: ${{ product.price }}</p>
+        <button @click="addToCart(product)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</template>
+<style scoped>
+</style>
+
+
+
+
+// src/App.vue
+<script setup>
+import {ref} from "vue";
+import ProductList from "./components/ProductList.vue";
+import Cart from "./components/Cart.vue";
+const products = ref([
+  {id: 1, name: "Product 1", price: 10.99},
+  {id: 2, name: "Product 2", price: 19.99},
+  {id: 3, name: "Product 3", price: 7.49},
+]);
+const cart = ref([]);
+function addToCart(product) {
+  const cartItem = cart.value.find((item) => item.product.id === product.id);
+  if (cartItem) {
+    cartItem.quantity++;
+  } else {
+    cart.value.push({product, quantity: 1});
+  }
+}
+</script>
+<template>
+  <div>
+    <ProductList :products="products" @add-to-cart="addToCart"/>
+    <Cart :cart="cart"/>
+  </div>
+</template>
+<style scoped>
+</style>
+
+
+This is a basic concept of creating a standard e-commerce "add to cart" functionality in Vue.js.
+We can expand upon this foundation to add more features like quantity adjustment, item removal, and calculating the total cart price.
+The basic concept of cart is to store product details and product quantity for further usage.

@@ -1,0 +1,7 @@
+Question : Implement a standard e-commerce add-to-cart using vue.js basic concepts.
+
+
+
+This is a basic concept of creating a standard e-commerce "add to cart" functionality in Vue.js.
+We can expand upon this foundation to add more features like quantity adjustment, item removal, and calculating the total cart price.
+The basic concept of cart is to store product details and product quantity for further usage.
