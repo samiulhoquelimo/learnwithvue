@@ -1,0 +1,4 @@
+Question
+
+Question : Setup Inertia.js application ( Vue.js and Laravel) and implement a sample page.
+
