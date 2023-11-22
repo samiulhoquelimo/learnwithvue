@@ -1,7 +1,18 @@
-# Vue 3 + Vite
+# মডিউল ১৬ এর এসাইনমেন্ট
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+✔️ Title: "Design a Landing page using Vue.js"
 
-## Recommended IDE Setup
+✔️ Objective: Build  a Responsive Landing page using Vue.js. Customise the design and layout to showcase your skills and projects effectively.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+✔️ Bonus: you can use Alpine.js directives.
+
+✔️ Instructions:
+
+✔️ Project Setup: Set up a project using Vite, Vue CLI or others if you prefer.
+
+✔️ Page Elements: Design a landing page with at least three distinct sections. Consider including a hero section, features section, and a call-to-action section, but feel free to be creative based on your chosen theme or message.
+
+✔️ Deploy your landing page to a hosting service of your choice (e.g., Netlify, Vercel, or GitHub Pages).
+
+✔️ Submission:
+Share the GitHub repository link and deployed portfolio site link.

@@ -1,0 +1,17 @@
+মডিউল ১৬ এর এসাইনমেন্ট
+
+Title: "Design a Landing page using Vue.js"
+
+Objective: Build  a Responsive Landing page using Vue.js. Customise the design and layout to showcase your skills and projects effectively.
+
+Bonus: you can use Alpine.js directives.
+
+Instructions:
+
+Project Setup: Set up a project using Vite, Vue CLI or others if you prefer.
+Page Elements: Design a landing page with at least three distinct sections. Consider including a hero section, features section, and a call-to-action section, but feel free to be creative based on your chosen theme or message.
+
+Deploy your landing page to a hosting service of your choice (e.g., Netlify, Vercel, or GitHub Pages).
+
+Submission:
+Share the GitHub repository link and deployed portfolio site link.
